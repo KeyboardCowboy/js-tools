@@ -14,3 +14,24 @@ Date.prototype.getWeek = function () {
     // Adjust to Thursday in week 1 and count number of weeks from date to week1.
     return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
 }
+
+/**
+ * Set the date to the previous weekday as specified.
+ *
+ * @param dow
+ */
+Date.prototype.setLastWeekday = function(dow) {
+    dow = dow.toLowerCase().substring(0, 3);
+    const dowMap = {'mon': 1, 'tue': 2, 'wed': 3, 'thu': 4, 'fri': 5, 'sat': 6, 'sun': 0};
+
+    // How many days ago was the last day specified?
+    const day = this.getDay();
+    const diff = day - dowMap[dow];
+
+    if (diff > 0) {
+        this.setDate(this.getDate() - diff);
+    }
+    else {
+        this.setDate(this.getDate() - (diff + 7));
+    }
+}
