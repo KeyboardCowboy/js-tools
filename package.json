@@ -1,0 +1,22 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "My collection of javascript utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeyboardCowboy/js-tools.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/KeyboardCowboy/js-tools/issues"
+  },
+  "homepage": "https://github.com/KeyboardCowboy/js-tools#readme",
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
+}
